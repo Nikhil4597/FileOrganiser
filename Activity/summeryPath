@@ -1,0 +1,6 @@
+src: It is a String, Buffer or URL that denotes the source filename to copy.
+dest: It is a String, Buffer or URL that denotes the destination filename that the copy operation would create.mode: It is an integer which specifies the behavior of the copy operation. The values can be given predefined constants that have their respective behaviours: 
+
+    fs.constants.COPYFILE_EXCL: This constant specifies that the copy operation would fail if the destination filename already exists.
+    fs.constants.COPYFILE_FICLONE: This constant specifies that the copy operation would try to create a copy-on-write reflink. A fallback mechanism is used if the platform does not support copy-on-write.
+    fs.constants.COPYFILE_FICLONE_FORCE: This constant specifies that the copy operation would try to create a copy-on-write reflink. The opeartion would fail if the platform does not support copy-on-write, unlike the previous one
